@@ -24,4 +24,7 @@ Graduando em Análise e Desenvolvimento de Sistemas, apaixonado por desenvolvime
 
 👋🏽 Curtiu? Entre em contato!
 
-[![Linkedin Badge](https://img.shields.io/badge/-Abner Andrade-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/abnerandrade/)](https://www.linkedin.com/in/abnerandrade/)
+<div style="display: flex">
+<a href = "https://www.linkedin.com/in/abnerandrade/"><img src="https://img.icons8.com/color/64/null/linkedin-circled--v1.png" target="_blank"></a>
+<a href = "https://api.whatsapp.com/send?phone=5521973257039&text=Oi,%20Abner.%20Curti%20tua%20Pokedex.%20%20Vamos%20trabalhar%20juntos?"><img src="https://img.icons8.com/color/64/null/whatsapp--v1.png" target="_blank"></a>
+</div>

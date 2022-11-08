@@ -2,48 +2,164 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Pokedex</title>
     
-    <!-- CSS -->
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAExMUAAgICAAACP8A9/f3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAIkQiAAAAAAJEREQgAAAAJEREREIAAAJERERERCAAAkREREREIAAkREQiRERCACIiIkQiIiIAIzMzETMzMgACMzMzMzMgAAIzMzMzMyAAACMzMzMyAAAAAjMzMyAAAAAAIjMiAAAAAAAAIgAAAAAAAAAAAAAAD+fwAA+B8AAPAPAADgBwAAwAMAAMADAACAAQAAgAEAAIABAADAAwAAwAMAAOAHAADwDwAA+B8AAP5/AAD//wAA">
 
+    <!-- CSS -->
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
-
     <!-- Estilo -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
+    <link rel="stylesheet" href="/assets/css/popup-pokemon.css">
+
 </head>
 
 <body>
     <section class="content">
+
         <h1>Pokedex</h1>
 
-        <ol id="pokemonList" class="pokemons">
+        <ol id="listaPokemon" class="pokemons">
             <!-- ..... POKEMON HERE ..... -->
         </ol>
 
-        <div class="pagination">
-            <button id="loadMoreButton" type="button">
+        <div id="popupPokemon" class="exibePUP grass">
+            <table id="tabelaCompletaPokemon" class="grass">
+                <thead>
+                    <tr><th  id="cel-name">Bulbassauro</th><th id="cel-num">#001</th></tr>
+                    
+                </thead>
+
+                <tbody>
+                    
+                    <tr id="row_overview" class="row-group">
+                        <td colspan="2">
+                            <table id="table_overview" class="subtabelas">
+                                <thead>
+                                    <tr><th colspan="3" id="cel-desc">nome científico</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td colspan="3"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="Bulbasaur"></td></tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+
+                    <tr id="row_types" class="row-group">
+                        <td colspan="2">
+                            <table class="subtabelas">
+                                <thead>
+                                    <tr><th class="cel-title">Type</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Grass Poison</td></tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+
+                    <tr id="row_stats" class="row-group">
+                        <td colspan="2">
+                            <table class="subtabelas">
+                                <thead>
+                                    <tr><td colspan="4" class="cel-title">Stats</td></tr>
+                                </thead>
+                                <tbody id="body-stats">
+                                    <tr><td>HP</td><td class="cel-stats-val">40</td><td>Speed</td><td class="cel-stats-val">50</td></tr>
+                                    <tr><td>Attack</td><td class="cel-stats-val">41</td><td>Defense</td><td class="cel-stats-val">51</td></tr>
+                                    <tr><td>Special Attack</td><td class="cel-stats-val">42</td><td>Special Defense</td><td class="cel-stats-val">52</td></tr>
+                                    <tr><td colspan="2">Total</td><td colspan="2" class="cel-stats-val">1000</td></tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+
+                    <tr id="row_entries" class="row-group">
+                        <td colspan="2">
+                            <table class="subtabelas">
+                                <thead>
+                                    <tr><td class="cel-title">Entries Yellow</td></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Bulbassauro é um Pokemon que tem um casco de planta e solta grama</td></tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr id="row_abilities" class="row-group">
+                        <td colspan="2">
+
+                            <table class="subtabelas">
+                                <thead>
+                                    <tr><td class="cel-title">Abilities</td></tr>
+                                </thead>
+                                <tbody>  
+                                    <tr><td>OvergrowChlorophyll</td></tr>
+                                </tbody>
+                            </table>
+        
+                        </td>
+                    </tr>
+
+
+                    <tr id="row_location" class="row-group">
+                        <td colspan="2">
+
+                            <table class="subtabelas">
+                                <tbody>
+                                    
+                                    <tr><td class="cel-title">Location Yellow</td></tr>
+                                    <tr><td>Cerulean City</td></tr>
+
+                                </tbody>
+                            </table>
+        
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <button id="bttClosePUP" class="grass">
+                X
+            </button>
+
+        </div>
+
+
+
+        <div class="paginacao">
+            <button id="bttMore" type="button">
                 Load More
             </button>
         </div>
+
     </section>
 
-    <!-- Nosso JS -->
+    <!-- JAVASCRIPT -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/pokemon-popup.js"></script>
 </body>
 
 </html>
