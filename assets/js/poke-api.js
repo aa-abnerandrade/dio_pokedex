@@ -1,6 +1,4 @@
-
 const pokeApi = {}
-console.log(pokeApi)
 
 function convertDetPokemonToClassPokemon(detPokemonAPI) {
     const pokemon = new Pokemon()

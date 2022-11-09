@@ -94,3 +94,20 @@
     height: 5rem;
     border-radius: 50%;
 }
+
+#row-photo {
+    min-height: 400px;
+    max-height: 400px;
+}
+
+#col-photo {
+    width: 100%;
+}
+
+#photo-pokemon {
+    max-height: 95%;
+    max-width: 95%;
+    justify-content: center;
+}
+
+
