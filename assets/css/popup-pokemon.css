@@ -1,19 +1,29 @@
+#div-popup {
+    
+}
+
+
 #popupPokemon {
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    width: 95%;
-    margin: 2rem auto;
+    width: 100%;
     padding: 0;
 
 }
 
-.ocultaPUP {
-    display: none;
+.exibePUP {
+    display: flex;
+    max-width: 95%;
+    margin: 2rem auto;
+    padding: 0;
+    justify-content: center;
+    position: absolute;
+    top: 1em;
 }
 
-.exibePUP {
-    position: absolute;
+.ocultaPUP {
+    display: none;
 }
 
 #tabelaCompletaPokemon {
@@ -89,25 +99,27 @@
     font-weight: bold;
     border: none;
     justify-content: center;
-    margin: 0.5rem auto;
-    width: 5rem;
-    height: 5rem;
+    margin: 0.25rem auto;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
 }
 
 #row-photo {
-    min-height: 400px;
-    max-height: 400px;
+    line-height: 250px;
+    max-height: 300px;
 }
 
 #col-photo {
+    max-height: 100px;
     width: 100%;
 }
 
 #photo-pokemon {
-    max-height: 95%;
+    max-height: 200px;
     max-width: 95%;
     justify-content: center;
+    vertical-align: middle;
 }
 
 

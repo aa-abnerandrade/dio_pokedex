@@ -37,13 +37,20 @@ function clickOnPokemon(idSelecionado) {
     .then(  (responseInfos)=> {
         console.log(responseInfos)
         console.log('Response Infos')
-        let cardPokemon = document.getElementById('popupPokemon')
+        let cardPokemon = document.getElementById('div-popup')
         cardPokemon.innerHTML = convertPokemonToCardHTML(responseInfos)
+        cardPokemon.classList.replace('ocultaPUP', 'exibePUP')
         //console.log(convertPokemonToCardHTML(responseInfos))
     })
     
 }
 
-
+function closePopup() {
+    console.log('fechar')
+    const elementPopup = document.getElementById('div-popup')
+    elementPopup.classList.replace('exibePUP', 'ocultaPUP')
+    // elementPopup.classList.remove('exibePUP')
+    // elementPopup.classList.add('ocultaPUP')
+}
 
 
