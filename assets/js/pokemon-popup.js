@@ -85,22 +85,6 @@ function convertPokemonToCardHTML(objPokemonSelect) {
                 </tr>
 
 
-                <tr id="row_location" class="row-group">
-                    <td colspan="2">
-
-                        <table class="subtabelas">
-                            <tbody>
-                                
-                                <tr><td class="cel-title">Location Yellow</td></tr>
-                                <tr><td>Cerulean City</td></tr>
-
-                            </tbody>
-                        </table>
-
-                    </td>
-
-                </tr>
-
             </tbody>
         </table>
 
