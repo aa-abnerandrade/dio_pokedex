@@ -21,8 +21,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
+    <!-- Ícones -->
     <!-- Estilo -->
     <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/assets/css/global--header.css">
+    <link rel="stylesheet" href="/assets/css/global--search.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
     <link rel="stylesheet" href="/assets/css/popup-pokemon.css">
 
@@ -33,40 +37,41 @@
         <h1><img class="cabecalho__titulo__logo" src="medias/logo_pokedex.png" alt="Pokédex"></h1>
     </header>
     
-    <section class="search">
+    <nav class="search">
         <div>
             <form action="">
-                <input type="text" name="" id="">
+                <input class="todos-inputs" type="text" name="" id="">
+                <button type="submit"><i class="uil uil-search"></i></button>
             </form>
         </div>
         
         <div>
             <button>
-
+                <i class="uil uil-filter"></i>
             </button>
+            <!-- <div id="filter_types" class="filter-buttons">
+                <button class="type-button" id="normal">normal</button>
+                <button class="type-button" id="fighting">fighting</button>
+                <button class="type-button" id="flying">flying</button>
+                <button class="type-button" id="poison">poison</button>
+                <button class="type-button" id="ground">ground</button>
+                <button class="type-button" id="rock">rock</button>
+                <button class="type-button" id="bug">bug</button>
+                <button class="type-button" id="ghost">ghost</button>
+                <button class="type-button" id="steel">steel</button>
+                <button class="type-button" id="fire">fire</button>
+                <button class="type-button" id="water">water</button>
+                <button class="type-button" id="grass">grass</button>
+                <button class="type-button" id="electric">electric</button>
+                <button class="type-button" id="psychic">psychic</button>
+                <button class="type-button" id="ice">ice</button>
+                <button class="type-button" id="dragon">dragon</button>
+                <button class="type-button" id="dark">dark</button>
+                <button class="type-button" id="fairy">fairy</button>
+            </div> -->
         </div>
 
-        <div id="filter_types" class="filter-buttons">
-            <button class="type-button" id="normal">normal</button>
-            <button class="type-button" id="fighting">fighting</button>
-            <button class="type-button" id="flying">flying</button>
-            <button class="type-button" id="poison">poison</button>
-            <button class="type-button" id="ground">ground</button>
-            <button class="type-button" id="rock">rock</button>
-            <button class="type-button" id="bug">bug</button>
-            <button class="type-button" id="ghost">ghost</button>
-            <button class="type-button" id="steel">steel</button>
-            <button class="type-button" id="fire">fire</button>
-            <button class="type-button" id="water">water</button>
-            <button class="type-button" id="grass">grass</button>
-            <button class="type-button" id="electric">electric</button>
-            <button class="type-button" id="psychic">psychic</button>
-            <button class="type-button" id="ice">ice</button>
-            <button class="type-button" id="dragon">dragon</button>
-            <button class="type-button" id="dark">dark</button>
-            <button class="type-button" id="fairy">fairy</button>
-        </div>
-    </section>
+    </nav>
 
     <section class="content">
 
