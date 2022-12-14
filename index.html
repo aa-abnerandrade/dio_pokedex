@@ -22,53 +22,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet">
     <!-- Ícones -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- Estilo -->
     <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="/assets/css/global--header.css">
-    <link rel="stylesheet" href="/assets/css/global--search.css">
+    <link rel="stylesheet" href="/assets/css/global--finder.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
     <link rel="stylesheet" href="/assets/css/popup-pokemon.css">
-
+    <!-- Animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
 </head>
 
 <body>
     <header>
-        <h1><img class="cabecalho__titulo__logo" src="medias/logo_pokedex.png" alt="Pokédex"></h1>
+        <h1 class=cabecalho__titulo><img class="cabecalho__titulo__logo" src="medias/logo_pokedex.png" alt="Pokédex"></h1>
     </header>
     
-    <nav class="search">
-        <div>
-            <form action="">
-                <input class="todos-inputs" type="text" name="" id="">
-                <button type="submit"><i class="uil uil-search"></i></button>
+    <nav class="discovery">
+
+        <div class="discovery__container">
+
+            <form id="discovery__search" action="">
+                <input class="todos-inputs" id="discovery__search__input" type="text" name="" >
+                <button id="discovery__search__icon" type="submit"><i class="uil uil-search"></i></button>
             </form>
+
+            <div id="discovery__filter">
+                <button id="discovery__filter__icon">
+                    <i class="uil uil-filter"></i>
+                </button>
+            </div>
         </div>
-        
-        <div>
-            <button>
-                <i class="uil uil-filter"></i>
-            </button>
-            <!-- <div id="filter_types" class="filter-buttons">
-                <button class="type-button" id="normal">normal</button>
-                <button class="type-button" id="fighting">fighting</button>
-                <button class="type-button" id="flying">flying</button>
-                <button class="type-button" id="poison">poison</button>
-                <button class="type-button" id="ground">ground</button>
-                <button class="type-button" id="rock">rock</button>
-                <button class="type-button" id="bug">bug</button>
-                <button class="type-button" id="ghost">ghost</button>
-                <button class="type-button" id="steel">steel</button>
-                <button class="type-button" id="fire">fire</button>
-                <button class="type-button" id="water">water</button>
-                <button class="type-button" id="grass">grass</button>
-                <button class="type-button" id="electric">electric</button>
-                <button class="type-button" id="psychic">psychic</button>
-                <button class="type-button" id="ice">ice</button>
-                <button class="type-button" id="dragon">dragon</button>
-                <button class="type-button" id="dark">dark</button>
-                <button class="type-button" id="fairy">fairy</button>
-            </div> -->
+
+
+        <div class="discovery__container escondeTypes animate__animated" id="discovery__types">
+            <button class="type-button normal" id="normal">normal</button>
+            <button class="type-button fighting" id="fighting">fighting</button>
+            <button class="type-button flying" id="flying">flying</button>
+            <button class="type-button poison" id="poison">poison</button>
+            <button class="type-button ground" id="ground">ground</button>
+            <button class="type-button rock" id="rock">rock</button>
+            <button class="type-button bug" id="bug">bug</button>
+            <button class="type-button ghost" id="ghost">ghost</button>
+            <button class="type-button steel" id="steel">steel</button>
+            <button class="type-button fire" id="fire">fire</button>
+            <button class="type-button water" id="water">water</button>
+            <button class="type-button grass" id="grass">grass</button>
+            <button class="type-button electric" id="electric">electric</button>
+            <button class="type-button psychic" id="psychic">psychic</button>
+            <button class="type-button ice" id="ice">ice</button>
+            <button class="type-button dragon" id="dragon">dragon</button>
+            <button class="type-button dark" id="dark">dark</button>
+            <button class="type-button fairy" id="fairy">fairy</button> 
         </div>
 
     </nav>
@@ -153,18 +159,7 @@
             
                             </td>
                         </tr>
-                        <tr id="row_location" class="row-group">
-                            <td colspan="2">
-                                <table class="subtabelas">
-                                    <tbody>
-            
-                                        <tr><td class="cel-title">Location Yellow</td></tr>
-                                        <tr><td>Cerulean City</td></tr>
-                                    </tbody>
-                                </table>
-            
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
                 <button id="bttClosePUP" class="grass" onclick="closePopup()">
@@ -187,6 +182,7 @@
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/discovery.js"></script>
     <script src="/assets/js/pokemon-card.js"></script>
     <script src="/assets/js/pokemon-popup.js"></script>
 </body>
