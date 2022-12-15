@@ -14,12 +14,12 @@ let inputSearch = document.getElementById('discovery__search__input');
 // >>>>>>>>> Exibir e Ocultar Tipos com botão Filtro
 bttFilter.addEventListener('click', function(e) {
     if(!showTypes) {
-        divTypes.classList.remove("escondeTypes");
+        divTypes.classList.remove("oculto");
         divTypes.classList.add("animate__flipInX");
         showTypes = true;
     }else {
         divTypes.classList.remove("animate__flipInX");
-        divTypes.classList.add("escondeTypes");
+        divTypes.classList.add("oculto");
         showTypes = false;
     }
 })
@@ -33,8 +33,8 @@ divTypes.childNodes.forEach(typeRadio => {
             console.log(selectedType);
 
             pokeApi.getPokemonByType(selectedType).then((pokemons = [])=> {
-                const newHtml = pokemons.map(convertPokemonToHtml).join('')
-                pokemonList.innerHTML = newHtml
+                const newHtml = pokemons.map(convertPokemonToLi).join('')
+                listaPokemon.innerHTML = newHtml
             })
         }
     })
