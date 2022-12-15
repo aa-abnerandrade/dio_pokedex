@@ -28,7 +28,36 @@ pokeApi.getPokemons = (offset = 0, limit = 5)=> {
     return fetch(url)
         .then( (response)=> response.json() )
         .then( (jsonBody)=> jsonBody.results)
-        .then( (resultPokemons) => resultPokemons.map(pokeApi.getDetailPokemon) )
-        .then( (detailRequisicoes) => Promise.all(detailRequisicoes) )
-        .then( (detailsPokemons) => detailsPokemons)
+        .then( (resultPokemons)=> resultPokemons.map(pokeApi.getDetailPokemon) )
+        .then( (detailRequisicoes)=> Promise.all(detailRequisicoes) )
+        .then( (detailsPokemons)=> detailsPokemons)
+}
+
+
+// pokeApi.getDetailTyped = (oneType)=> {
+//     return fetch(oneType.pokemon.url)
+//         .then( (response)=> response.json() )
+//         .then( convertDetPokemonToClassPokemon )
+// }
+
+pokeApi.getDetailTyped = (pokemon)=> {
+    return fetch(pokemon.url)
+        .then( (response)=> response.json() )
+        .then( convertDetPokemonToClassPokemon )
+}
+
+pokeApi.getPokemonByType = (oneType)=> {
+    console.log(typeof oneType)
+    console.log('o tipo é' + oneType)
+    const urlType = `https://pokeapi.co/api/v2/type/${oneType}`;
+
+    return fetch(urlType)
+        .then( (responseT)=> responseT.json() )
+        .then( (jsonTypesBody)=> jsonTypesBody.results)
+        .then( (resultTypesPokemons)=> resultTypesPokemons.map(pokeApi.getDetailTyped) )
+        .then( (detailTypesRequisicoes)=> Promise.all(detailTypesRequisicoes) )
+        .then( (detailsTypesPokemons)=> detailsTypesPokemons)
+
+
+
 }
