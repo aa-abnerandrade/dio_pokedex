@@ -1,26 +1,28 @@
-// declarações filtro
-const bttFilter = document.getElementById('discovery__filter__icon');
-const divTypes = document.getElementById('discovery__types');
-console.log(bttFilter);
-console.log(divTypes);
-let showTypes = false;
 
-// declarações pesquisa
-const bttSearch = document.getElementById('discovery__search__icon');
-let inputSearch = document.getElementById('discovery__search__input'); 
+const bttOption = document.getElementById('discovery__option__icon');
+const divPlus = document.getElementById('discovery__plus');
+console.log(bttOption);
+console.log(divPlus);
+let showPlus = false;
+
+
+let inputSearch = document.getElementById('discovery__plus__search__form__input'); 
+const bttSearch = document.getElementById('discovery__plus__search__form__icon');
+
+const divTypes = document.getElementById('discovery__plus__types');
 
 // ---------------------------------------------------------------------
 
 // >>>>>>>>> Exibir e Ocultar Tipos com botão Filtro
-bttFilter.addEventListener('click', function(e) {
-    if(!showTypes) {
-        divTypes.classList.remove("oculto");
-        divTypes.classList.add("animate__flipInX");
-        showTypes = true;
+bttOption.addEventListener('click', function(e) {
+    if(!showPlus) {
+        divPlus.classList.remove("oculto");
+        divPlus.classList.add("animate__fadeIn");
+        showPlus = true;
     }else {
-        divTypes.classList.remove("animate__flipInX");
-        divTypes.classList.add("oculto");
-        showTypes = false;
+        divPlus.classList.remove("animate__fadeIn");
+        divPlus.classList.add("oculto");
+        showPlus = false;
     }
 })
 
@@ -43,7 +45,7 @@ divTypes.childNodes.forEach(typeRadio => {
 //const input = document.querySelector("#my-input");
 
 function searchPokemon() {
-    let objInputSearch = document.getElementById('discovery__search__input').value; 
+    let objInputSearch = document.getElementById('discovery__plus__search__form__input').value; 
     console.log(objInputSearch);
 }
 
