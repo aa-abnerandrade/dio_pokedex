@@ -31,8 +31,7 @@ divTypes.childNodes.forEach(typeRadio => {
         const selectedType = e.target.innerHTML;
 
         if (selectedType) {
-            console.log('tipo selecionado');
-            console.log(selectedType);
+            console.log('tipo selecionado ' + selectedType);
 
             pokeApi.getPokemonByType(selectedType).then((pokemons = [])=> {
                 const newHtml = pokemons.map(convertPokemonToLi).join('')
@@ -41,25 +40,21 @@ divTypes.childNodes.forEach(typeRadio => {
         }
     })
 })
-// >>>>>>>>> Procurar Pokemon
-//const input = document.querySelector("#my-input");
+
 
 function searchPokemon() {
     let objInputSearch = document.getElementById('discovery__plus__search__form__input').value; 
     console.log(objInputSearch);
+    
+    pokeApi.getPokemonByNameOrNumber(objInputSearch).then( (onePokemon = [])=> {
+        const newHTML = convertPokemonToLi(onePokemon)
+        listaPokemon.innerHTML = newHTML
+    })
 }
+
 
 bttSearch.addEventListener('click', function(e) {
     e.preventDefault();
     console.log('botão pesquisar')
     searchPokemon();
 })
-
-// inputSearch.addEventListener('keyup', function(e) {
-//     e.preventDefault();
-//     let tecla = e.key;
-//     if (tecla === "Enter") {
-//         console.log("Ativou o Enter!")
-//         searchPokemon();
-//     }
-// })

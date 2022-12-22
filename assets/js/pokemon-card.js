@@ -2,7 +2,7 @@ const cardAPI = {}
 const pokemonSelect = []
 
 
-cardAPI.getPokemonSelect = function (urlSelecionada){
+cardAPI.getPokemonSelect = function(urlSelecionada) {
     
     return fetch(urlSelecionada)
         .then(  (response)=> {
@@ -10,9 +10,6 @@ cardAPI.getPokemonSelect = function (urlSelecionada){
         })
         .then(  (responseJson)=> {
             console.log(responseJson)
-            //console.log('Response Json')
-            //pokemonSelect.push(responseJson.abilities)
-            //console.log(pokemonSelect)
             return responseJson
         })
 
@@ -24,7 +21,6 @@ cardAPI.getPokemonSelect = function (urlSelecionada){
         })
 
 }
-
 
 
 function clickOnPokemon(idSelecionado) {
