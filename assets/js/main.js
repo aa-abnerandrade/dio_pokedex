@@ -7,6 +7,7 @@ let offset = 0;
 
 
 function convertPokemonToLi(objPokemon) {
+    console.log('Convertendo para LI ' + objPokemon)
     return `
         <li id="${objPokemon.number}" class="pokemon ${objPokemon.type}" onclick="clickOnPokemon(this.id)" >
             <span class="number">#${objPokemon.number}</span>
@@ -22,6 +23,26 @@ function convertPokemonToLi(objPokemon) {
         </li>
     `
 }
+
+
+// function convertTypedToLi(objPokemonFiltred) {
+//     console.log('Convertendo Typed LI ' + objPokemonFiltred)
+//     return `
+//         <li id="${objPokemonFiltred}" class="pokemon ${objPokemonFiltred.type}" onclick="clickOnPokemon(this.id)" >
+//             <span class="number">#${objPokemonFiltred}</span>
+//             <span class="name">${objPokemonFiltred.name}</span>
+
+//             <div class="detail">
+//                 <ol class="types">
+//                     ${objPokemonFiltred.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+//                 </ol>
+
+//                 <img src="${objPokemonFiltred.photo}" alt="${objPokemonFiltred.name}">
+//             </div>
+//         </li>
+//     `
+// }
+
 
 function loadMorePokemons(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((allPokemons = []) => {

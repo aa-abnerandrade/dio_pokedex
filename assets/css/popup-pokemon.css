@@ -3,123 +3,186 @@
 }
 
 
-#popupPokemon {
-    border-radius: 1rem;
+    #popupPokemon {
+        border: #000 solid 1px;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+
+    }
+
+    .exibePUP {
+        display: flex;
+        max-width: 95%;
+        margin: 2rem auto;
+        padding: 0;
+        justify-content: center;
+        position: absolute;
+        top: 1em;
+    }
+
+    .ocultaPUP {
+        display: none;
+    }
+
+
+        #card {
+            background: rgb(226,226,226);
+            background: linear-gradient(180deg, rgba(226,226,226,0.09653368183210786) 0%, rgba(255,255,255,0.30101547454919464) 22%, rgba(255,255,255,0.799614914325105) 36%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+
+            border: #F0F solid 2px;
+            padding: 1rem 0;
+        }
+
+
+#card__tabela {
+    border: blue solid 1px;
+}
+
+    #tabelaCompletaPokemon {
+        
+        color: #111111;
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        /*border: 5px solid #000000;*/
+        border-radius: 1rem;
+    }
+
+    #row-namenumber {
+        color: #FFFFFF;
+    }
+
+    #cel-name {
+        text-align: left;
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        padding: 0.5rem 0.5rem
+    }
+
+    #cel-num {
+        font-size: 1.25rem;
+        padding: 0.5rem 0.5rem;
+        text-align: right;
+    }
+
+    #row_overview {
+        text-align: center;
+        color: #222222;
+        font-style: italic;
+    }
+
+    .row-group {
+        width: 100%;
+    }
+
+    #row_types {
+        
+    }
+
+    #col-types{
+        width: 100%;
+    }
+
+    .lista-NoListed {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0 1rem;
+    }
+
+    .card__types__li {
+        color: #fff;
+        padding: .5rem 1rem;
+        margin: .25rem 0;
+        font-size: 1rem;
+        border-radius: 1rem;
+        filter: brightness(1.1);
+        text-align: center;
+    }
+    
+
+
+    .subtabelas {
+        border-radius: 1rem;
+        margin: 0.25rem auto;
+        width: 100%;
+    }
+
+    #table_overview {
+        background-color: transparent;
+    }
+
+    .subtabelas td {
+        padding: 0.25rem;
+    }
+
+    #cel-desc {
+        text-align: left;
+        font-size: 1rem;
+        font-style: italic;
+        padding: 0 0.5rem
+    }
+
+    .cel-title {
+        border-radius: 1rem 1rem 0 0;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    #body-stats {
+        text-align: right;
+    }
+
+    .cel-stats-val {
+        text-align: left;
+    }
+
+    #row-photo {
+        line-height: 20px;
+        max-height: 300px;
+    }
+
+    #col-photo {
+        max-height: 100px;
+        width: 100%;
+    }
+
+    #photo-pokemon {
+        height: 100px;
+        max-width: 95%;
+        justify-content: center;
+        vertical-align: middle;
+    }
+
+
+#card__botoes {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 0;
-
 }
 
-.exibePUP {
-    display: flex;
-    max-width: 95%;
-    margin: 2rem auto;
-    padding: 0;
-    justify-content: center;
-    position: absolute;
-    top: 1em;
-}
+    .botao-seta {  
+        color: #AAAAAA; 
+        background-color: transparent;
+        border: none;
+        font-size: 3rem;
+        width: 30%;
+    }
 
-.ocultaPUP {
-    display: none;
-}
-
-#tabelaCompletaPokemon {
-    color: #FFFFFF;
-    box-sizing: border-box;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    /*border: 5px solid #000000;*/
-    border-radius: 1rem;
-}
-
-.row-group {
-    width: 100%;
-}
-
-
-.subtabelas {
-    background-color: #00000022;
-    border-radius: 1rem;
-    margin: 0.25rem auto;
-    width: 100%;
-}
-
-#table_overview {
-    background-color: transparent;
-}
-
-.subtabelas td {
-    padding: 0.25rem;
-}
-
-#cel-name {
-    text-align: left;
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    padding: 0.5rem 0.5rem
-}
-
-#cel-num {
-    font-size: 1.25rem;
-    padding: 0.5rem 0.5rem;
-    text-align: right;
-    opacity: 0.5;
-}
-
-#cel-desc {
-    text-align: left;
-    font-size: 1rem;
-    font-style: italic;
-    padding: 0 0.5rem
-}
-
-.cel-title {
-    background-color: #00000033;
-    border-radius: 1rem 1rem 0 0;
-    font-size: 1.25rem;
-    line-height: 2rem;
-}
-
-#body-stats {
-    text-align: right;
-}
-
-.cel-stats-val {
-    text-align: left;
-}
-
-#bttClosePUP {
-    filter: brightness(0.7);
-    font-size: 1rem;
-    color: #FFFFFF;
-    font-weight: bold;
-    border: none;
-    justify-content: center;
-    margin: 0.25rem auto;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-}
-
-#row-photo {
-    line-height: 20px;
-    max-height: 300px;
-}
-
-#col-photo {
-    max-height: 100px;
-    width: 100%;
-}
-
-#photo-pokemon {
-    max-height: 200px;
-    max-width: 95%;
-    justify-content: center;
-    vertical-align: middle;
-}
+    #bttClosePUP {
+        font-size: 2rem;
+        color: #FFFFFF;
+        font-weight: bold;
+        border: none;
+        justify-content: center;
+        margin: 0.25rem auto;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
 
 

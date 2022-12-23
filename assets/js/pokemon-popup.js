@@ -17,7 +17,7 @@ function convertPokemonToCardHTML(objPokemonSelect) {
                                     <tr><th colspan="3" id="cel-desc">nome científico</th></tr>
                                 </thead>
                                 <tbody>
-                                    <tr id="row-photo"><td colspan="3" id="col-photo"><img id="photo-pokemon" src="${objPokemonSelect.sprites.other.dream_world.front_default}" alt="${objPokemonSelect.name}"></td></tr>
+                                    <tr id="row-photo"><td colspan="3" id="col-photo"><img id="photo-pokemon" src="${objPokemonSelect.sprites.versions["generation-v"]["black-white"].animated.front_default}" alt="${objPokemonSelect.name}"></td></tr> 
                                 </tbody>
                             </table>
                         </td>

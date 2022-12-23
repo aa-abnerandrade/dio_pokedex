@@ -31,8 +31,8 @@ function clickOnPokemon(idSelecionado) {
 
     cardAPI.getPokemonSelect(urlPokemon)
     .then(  (responseInfos)=> {
-        console.log(responseInfos)
-        console.log('Response Infos')
+        // console.log(responseInfos)
+        // console.log('Response Infos')
         let cardPokemon = document.getElementById('div-popup')
         cardPokemon.innerHTML = convertPokemonToCardHTML(responseInfos)
         cardPokemon.classList.replace('ocultaPUP', 'exibePUP')

@@ -33,10 +33,16 @@ divTypes.childNodes.forEach(typeRadio => {
         if (selectedType) {
             console.log('tipo selecionado ' + selectedType);
 
-            pokeApi.getPokemonByType(selectedType).then((pokemons = [])=> {
-                const newHtml = pokemons.map(convertPokemonToLi).join('')
-                listaPokemon.innerHTML = newHtml
+            pokeApi.getPokemonByType(selectedType)
+            .then( (allPokemons = [])=> {
+                    const newHtml = allPokemons.map(convertPokemonToLi).join('')
+                    listaPokemon.innerHTML = newHtml
             })
+            // pokeApi.getPokemonByType(selectedType)
+            //     .then( (responseFiltred)=> {
+            //         const newHtml = responseFiltred.map(convertTypedToLi).join('')
+            //         listaPokemon.innerHTML += newHtml
+            // })
         }
     })
 })
