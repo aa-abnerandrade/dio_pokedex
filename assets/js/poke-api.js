@@ -14,41 +14,24 @@ function convertDetPokemonToClassPokemon(detPokemonAPI) {
     pokemon.type = type
 
     pokemon.photo = detPokemonAPI.sprites.other.dream_world.front_default
-    //console.log('Instância criada')    
+    console.log('Instância criada')    
     
     return pokemon
 }
 
 
-function limitaNumeroPokemon(oneID) {
-    console.log('Dentro de função LimitaNumero ' + oneID);
-    if (oneID <= 386) {
-        console.log('verdadeiro ' + oneID)
-        return true;
-    } else {
-        console.log('falso ' + oneID)
-        return false;
-    }
-}
 
+pokeApi.getIDPokemon = function(draftPokemon) {
+    console.log(draftPokemon);
+    console.log(draftPokemon.pokemon.url); 
+    let urlDraftPokemon = draftPokemon.pokemon.url;
+    console.log(urlDraftPokemon)
 
-pokeApi.getIdPokemonDiscovey = function(urlOnePokemon) {
-    return fetch(urlOnePokemon)
-        .then( (responseOnePokemon)=> responseOnePokemon.json() )
-        .then( (jsonOnePokemon)=> jsonOnePokemon.id)
-        .then( (uniqueID)=> uniqueID)
+    return fetch(urlDraftPokemon)
+        .then( (response)=> response.json())
+        .then( (jResponse)=> jResponse.id)
+        .then( (idOnePoke)=> {return idOnePoke})
 } 
-
-pokeApi.limitaNumeroPokemon = function(oneID) {
-    console.log('Dentro de getnumeropokemon ' + oneID);
-    if (oneID < 386) {
-        console.log('verdadeiro ' + oneID)
-        return true;
-    } else {
-        console.log('falso ' + oneID)
-        return false;
-    }
-}
 
 
 pokeApi.getDetailPokemon = (pokemon)=> {
@@ -83,21 +66,17 @@ pokeApi.getPokemonByNameOrNumber = (objInputSearch)=> {
 
 
 
-pokeApi.getDetailTyped = (oneType)=> {
-    console.log('Get detalhe type pokemon');
-    console.log(oneType.pokemon.url);
+pokeApi.filtraPokemon = (idPokemon)=> {
+    console.log("ID Recebido" + idPokemon)
+    return idPokemon <= 386;
+}
 
-    // idOnePokemon = await pokeApi.getIdPokemonDiscovey(oneType.pokemon.url);
-    // console.log('TESTE DE ID DEPOIS DA BUSCA: ' + idOnePokemon)
-    // availablePokemon = limitaNumeroPokemon(idOnePokemon);
-    // console.log('Pokemon Disponivel ' + availablePokemon)
-    // if (idOnePokemon < 386) {
-    //     return fetch(oneType.pokemon.url)
-    //             .then( (response)=> response.json() )
-    //             .then( convertDetPokemonToClassPokemon )  
-    // }    
 
-    return fetch(oneType.pokemon.url)
+pokeApi.getDetailTyped = (idFiltred)=> {
+    console.log('ID Filtrado' + idFiltred)
+    const urlPokemon = `https://pokeapi.co/api/v2/pokemon/${idFiltred}`
+
+    return fetch(urlPokemon)
         .then( (response)=> response.json() )
         .then( convertDetPokemonToClassPokemon )
 }
@@ -107,17 +86,15 @@ pokeApi.getPokemonByType = (oneType)=> {
     const urlType = `https://pokeapi.co/api/v2/type/${oneType}`;
     console.log(urlType);
 
-    // return fetch(urlType)
-    //     .then( (responseT)=> responseT.json() )
-    //     .then( (jsonTypesBody)=> jsonTypesBody.pokemon)
-    //     .then( (resultTypesPokemons)=> resultTypesPokemons.map(pokeApi.getDetailTyped) )
-    //     .then( (detailTypesRequisicoes)=> Promise.all(detailTypesRequisicoes) )
-    //     .then( (detailsTypesPokemons)=> detailsTypesPokemons)
-
     return fetch(urlType)
         .then( (responseT)=> responseT.json() )
         .then( (jsonTypesBody)=> jsonTypesBody.pokemon)
-        .then( (resultTypesPokemons)=> resultTypesPokemons.map(pokeApi.getDetailTyped) )
+        .then( (totalPokemon)=> totalPokemon.map(pokeApi.getIDPokemon))
+        .then( (listaID)=> Promise.all(listaID) )
+        .then( (numberPokemon)=> numberPokemon.filter(pokeApi.filtraPokemon))
+        .then( (listaFiltrada)=> Promise.all(listaFiltrada))
+        .then( (filtredPokemon)=> filtredPokemon.map(pokeApi.getDetailTyped))
         .then( (detailTypesRequisicoes)=> Promise.all(detailTypesRequisicoes) )
         .then( (detailsTypesPokemons)=> detailsTypesPokemons)
+
 }

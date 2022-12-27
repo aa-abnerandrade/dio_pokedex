@@ -4,7 +4,7 @@
 
 
     #popupPokemon {
-        border: #000 solid 1px;
+        border: #AAA solid 2px;
         border-radius: 1rem;
         display: flex;
         flex-direction: column;
@@ -30,15 +30,15 @@
 
         #card {
             background: rgb(226,226,226);
-            background: linear-gradient(180deg, rgba(226,226,226,0.09653368183210786) 0%, rgba(255,255,255,0.30101547454919464) 22%, rgba(255,255,255,0.799614914325105) 36%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 100%);
+            background: linear-gradient(180deg, rgba(226,226,226,0.30101547454919464) 0%, rgba(255,255,255,0.09653368183210786) 3%, rgba(255,255,255,0.10213592272846639) 13%, rgba(255,255,255,0.799614914325105) 29%, rgba(255,255,255,1) 45%, rgba(255,255,255,1) 80%, rgba(255,255,255,0.2) 100%);
 
-            border: #F0F solid 2px;
+            border: none;
             padding: 1rem 0;
         }
 
 
 #card__tabela {
-    border: blue solid 1px;
+    border: none;
 }
 
     #tabelaCompletaPokemon {
@@ -52,28 +52,46 @@
         border-radius: 1rem;
     }
 
+    #row-photo {
+        line-height: 20px;
+        max-height: 300px;
+    }
+
+    #col-photo {
+        max-height: 100px;
+        width: 100%;
+    }
+
+        #photo-pokemon {
+            height: 150px;
+            max-width: 95%;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
     #row-namenumber {
-        color: #FFFFFF;
+        color: #333;
     }
 
-    #cel-name {
-        text-align: left;
-        font-weight: 400;
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        padding: 0.5rem 0.5rem
-    }
+        #cel-name {
+            text-align: left;
+            font-weight: 400;
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            padding: 0.5rem 0.5rem
+        }
 
-    #cel-num {
-        font-size: 1.25rem;
-        padding: 0.5rem 0.5rem;
-        text-align: right;
-    }
+        #cel-num {
+            font-size: 1.25rem;
+            padding: 0.5rem 0.5rem;
+            text-align: right;
+        }
 
     #row_overview {
         text-align: center;
         color: #222222;
         font-style: italic;
+        font-weight: 350;
     }
 
     .row-group {
@@ -137,28 +155,19 @@
 
     #body-stats {
         text-align: right;
+        font-weight: 350;
     }
 
     .cel-stats-val {
         text-align: left;
+        font-weight: 500;
     }
 
-    #row-photo {
-        line-height: 20px;
-        max-height: 300px;
+    .cel-capitalize {
+        text-transform: capitalize;
     }
 
-    #col-photo {
-        max-height: 100px;
-        width: 100%;
-    }
-
-    #photo-pokemon {
-        height: 100px;
-        max-width: 95%;
-        justify-content: center;
-        vertical-align: middle;
-    }
+    
 
 
 #card__botoes {
@@ -166,7 +175,7 @@
 }
 
     .botao-seta {  
-        color: #AAAAAA; 
+        color: #FFF; 
         background-color: transparent;
         border: none;
         font-size: 3rem;
