@@ -12,6 +12,12 @@ cardAPI.getPokemonSelect = function(urlSelecionada) {
             console.log(responseJson)
             return responseJson
         })
+        .then( (jResponse)=> {
+            return convertDetPokemonToClassPokemon(jResponse)
+        })
+        .then( (instanciaPokemon)=> {
+            return instanciaPokemon
+        })
 
         .catch( function(erro){
             console.log(erro)
@@ -30,11 +36,9 @@ function clickOnPokemon(idSelecionado) {
     //console.log('URL DENTRO' + urlPokemon)
 
     cardAPI.getPokemonSelect(urlPokemon)
-    .then(  (responseInfos)=> {
-        // console.log(responseInfos)
-        // console.log('Response Infos')
+    .then(  (instanciaPokemon)=> {
         let cardPokemon = document.getElementById('div-popup')
-        cardPokemon.innerHTML = convertPokemonToCardHTML(responseInfos)
+        cardPokemon.innerHTML = convertPokemonToCardHTML(instanciaPokemon)
         cardPokemon.classList.replace('ocultaPUP', 'exibePUP')
         //console.log(convertPokemonToCardHTML(responseInfos))
     })

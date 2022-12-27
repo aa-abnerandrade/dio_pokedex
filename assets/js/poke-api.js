@@ -9,11 +9,23 @@ function convertDetPokemonToClassPokemon(detPokemonAPI) {
 
     const types = detPokemonAPI.types.map( (typeSlot) => typeSlot.type.name)
     const [type] = types
-
     pokemon.types = types
     pokemon.type = type
 
     pokemon.photo = detPokemonAPI.sprites.other.dream_world.front_default
+    pokemon.gif = detPokemonAPI.sprites.versions["generation-v"]["black-white"].animated.front_default
+
+    pokemon.hp = detPokemonAPI.stats[0].base_stat
+    pokemon.speed = detPokemonAPI.stats[5].base_stat
+    pokemon.attack = detPokemonAPI.stats[1].base_stat
+    pokemon.defense = detPokemonAPI.stats[2].base_stat
+    pokemon.specialattack = detPokemonAPI.stats[3].base_stat
+    pokemon.specialdefense = detPokemonAPI.stats[4].base_stat
+
+    const abilities = detPokemonAPI.abilities.map( (abilitySlot)=> abilitySlot.ability.name)
+    const [ability] = abilities
+    pokemon.abilities = abilities
+    pokemon.ability = ability
     console.log('Instância criada')    
     
     return pokemon
