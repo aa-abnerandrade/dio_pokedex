@@ -1,0 +1,12 @@
+footer {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: rgb(128,140,230);
+    background: linear-gradient(106deg, rgba(128,140,230,1) 0%, rgba(115,130,209,1) 6%, rgba(115,129,227,1) 12%, rgba(81,98,220,1) 45%, rgba(64,82,217,1) 68%, rgba(64,82,217,1) 100%);
+}
+
+footer img {
+    max-height: 90%;
+    padding-left: 2rem;
+}

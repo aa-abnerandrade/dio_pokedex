@@ -1,5 +1,5 @@
 #div-popup {
-    
+    z-index: 1;
 }
 
 
@@ -16,11 +16,11 @@
     .exibePUP {
         display: flex;
         width: 92%;
-        margin: 2rem auto;
+        vertical-align: middle;
         padding: 0;
         justify-content: center;
-        position: absolute;
-        top: 1em;
+        position: fixed;
+        top: 15%;
     }
 
     .ocultaPUP {

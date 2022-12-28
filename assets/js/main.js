@@ -1,12 +1,18 @@
 const listaPokemon = document.getElementById('listaPokemon')
 const bttMore = document.getElementById('bttMore')
+const divPaginacaoMore = document.getElementById('paginacaoMore')
+const bttAll = document.getElementById('bttAll')
 
 const maxRecords = 386;
-let limit = 10;
 let offset = 0;
+let limit = 10;
 
 function hideLoadMore() {
-    bttMore.parentElement.removeChild(bttMore)
+    divPaginacaoMore.removeChild(bttMore)
+}
+
+function showLoadMore() {
+    divPaginacaoMore.appendChild(bttMore)
 }
 
 function loadMorePokemons(offset, limit) {
@@ -29,4 +35,10 @@ bttMore.addEventListener('click', ()=> {
     } else {
         loadMorePokemons(offset, limit)
     }
+})
+
+bttAll.addEventListener('click', ()=> {
+    listaPokemon.innerHTML = ''
+    loadMorePokemons(0, 30)
+    showLoadMore()
 })

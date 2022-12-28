@@ -38,6 +38,9 @@ divTypes.childNodes.forEach(typeRadio => {
                     const newHtml = allPokemons.map(convertPokemonToLi).join('')
                     listaPokemon.innerHTML = newHtml
             })
+            divPlus.classList.remove("animate__fadeIn");
+            divPlus.classList.add("oculto");
+            showPlus = false;
             hideLoadMore();
         }
     })
