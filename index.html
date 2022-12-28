@@ -93,9 +93,9 @@
 
         <div id="div-popup" class="exibePUP">
             
-            <div id="popupPokemon" class="grass">
+            <!-- <div id="popupPokemon" class="grass">
 
-                <!--<div id="card" class="grass">
+                <div id="card" class="grass">
                     <div id="card__tabela">
                         
                         <table id="tabelaCompletaPokemon">
@@ -117,9 +117,27 @@
                                         </ol>
                                     </td>
                                 </tr>
+                                
                                 <tr id="row_entries" class="row-group">
                                     <td colspan="2">
-                                        Bulbassauro é um Pokemon que tem um casco de planta e solta grama
+                        
+                                        <table class="subtabelas">
+                                            <thead>
+                                                <tr><td colspan="4" class="cel-title">Physical</td></tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Height</td>
+                                                    <td>Weight</td>
+                                                </tr>   
+                                                <tr>
+                                                    <td>100cm</td>
+                                                    <td>200Kg</td>
+                                                </tr>
+                                            </tbody>
+
+                                        </table>
+                        
                                     </td>
                                 </tr>
                                 <tr id="row_stats" class="row-group">
@@ -129,10 +147,24 @@
                                                 <tr><td colspan="4" class="cel-title">Stats</td></tr>
                                             </thead>
                                             <tbody id="body-stats">
-                                                <tr><td>HP</td><td class="cel-stats-val">40</td><td>Speed</td><td class="cel-stats-val">50</td></tr>
-                                                <tr><td>Attack</td><td class="cel-stats-val">41</td><td>Defense</td><td class="cel-stats-val">51</td></tr>
-                                                <tr><td>Special Attack</td><td class="cel-stats-val">42</td><td>Special Defense</td><td class="cel-stats-val">52</td></tr>
-                                                <tr><td colspan="2">Total</td><td colspan="2" class="cel-stats-val">1000</td></tr>
+                                                <tr>
+                                                    <td>HP</td>
+                                                    <td class="cel-stats-val">40</td>
+                                                    <td>Speed</td>
+                                                    <td class="cel-stats-val">50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Attack</td>
+                                                    <td class="cel-stats-val">41</td>
+                                                    <td>Defense</td>
+                                                    <td class="cel-stats-val">51</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Special Attack</td>
+                                                    <td class="cel-stats-val">42</td>
+                                                    <td>Special Defense</td>
+                                                    <td class="cel-stats-val">52</td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </td>
@@ -251,9 +283,9 @@
                 </table>
                 <button id="bttClosePUP" class="grass" onclick="closePopup()">
                     X
-                </button> -->
+                </button> 
 
-            </div> 
+            </div> -->
 
         </div>
 
@@ -272,8 +304,10 @@
     <script src="assets/js/poke-api.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/discovery.js"></script>
+    <script src="assets/js/discovery-search.js"></script>
+    <script src="assets/js/discovery-types.js"></script>
     <script src="assets/js/pokemon-card.js"></script>
-    <script src="assets/js/pokemon-popup.js"></script>
+    <script src="assets/js/content-HTML.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 const cardAPI = {}
 const pokemonSelect = []
+let currentIDPokemonCard = 0
 
 
 cardAPI.getPokemonSelect = function(urlSelecionada) {
@@ -40,9 +41,17 @@ function clickOnPokemon(idSelecionado) {
         let cardPokemon = document.getElementById('div-popup')
         cardPokemon.innerHTML = convertPokemonToCardHTML(instanciaPokemon)
         cardPokemon.classList.replace('ocultaPUP', 'exibePUP')
+        currentIDPokemonCard = instanciaPokemon.number
+        console.log(currentIDPokemonCard)
         //console.log(convertPokemonToCardHTML(responseInfos))
     })
     
+}
+
+function previousPokemonPopup() {
+    let idPreviousPokemon = currentIDPokemonCard - 1
+    console.log(idPreviousPokemon)
+    clickOnPokemon(idPreviousPokemon)
 }
 
 function closePopup() {
@@ -52,5 +61,12 @@ function closePopup() {
     // elementPopup.classList.remove('exibePUP')
     // elementPopup.classList.add('ocultaPUP')
 }
+
+function nextPokemonPopup() {
+    let idNextPokemon = currentIDPokemonCard + 1
+    console.log(idNextPokemon)
+    clickOnPokemon(idNextPokemon)
+}
+
 
 

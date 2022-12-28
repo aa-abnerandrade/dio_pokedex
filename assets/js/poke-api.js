@@ -2,6 +2,8 @@ const pokeApi = {}
 var availablePokemon = false;
 var idOnePokemon = 1;
 
+
+
 function convertDetPokemonToClassPokemon(detPokemonAPI) {
     const pokemon = new Pokemon()
     pokemon.number = detPokemonAPI.id
@@ -11,6 +13,9 @@ function convertDetPokemonToClassPokemon(detPokemonAPI) {
     const [type] = types
     pokemon.types = types
     pokemon.type = type
+
+    pokemon.height = detPokemonAPI.height*10
+    pokemon.weight = detPokemonAPI.weight*0.100
 
     pokemon.photo = detPokemonAPI.sprites.other.dream_world.front_default
     pokemon.gif = detPokemonAPI.sprites.versions["generation-v"]["black-white"].animated.front_default
@@ -46,12 +51,15 @@ pokeApi.getIDPokemon = function(draftPokemon) {
 } 
 
 
+
 pokeApi.getDetailPokemon = (pokemon)=> {
     console.log(pokemon.url)
     return fetch(pokemon.url)
         .then( (response)=> response.json() )
         .then( convertDetPokemonToClassPokemon )
 }
+
+
 
 pokeApi.getPokemons = (offset = 0, limit = 10)=> {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
@@ -63,19 +71,6 @@ pokeApi.getPokemons = (offset = 0, limit = 10)=> {
         .then( (detailRequisicoes)=> Promise.all(detailRequisicoes) )
         .then( (detailsPokemons)=> detailsPokemons)
 }
-
-
-
-pokeApi.getPokemonByNameOrNumber = (objInputSearch)=> {
-    console.log('Poke API por nome ou number');
-    const urlWanted = `https://pokeapi.co/api/v2/pokemon/${objInputSearch}/`;
-    console.log(urlWanted);
-    
-    return fetch(urlWanted)
-        .then( (response)=> response.json() )
-        .then( convertDetPokemonToClassPokemon )
-}
-
 
 
 pokeApi.filtraPokemon = (idPokemon)=> {
@@ -93,20 +88,3 @@ pokeApi.getDetailTyped = (idFiltred)=> {
         .then( convertDetPokemonToClassPokemon )
 }
 
-pokeApi.getPokemonByType = (oneType)=> {
-    console.log('o tipo é' + oneType)
-    const urlType = `https://pokeapi.co/api/v2/type/${oneType}`;
-    console.log(urlType);
-
-    return fetch(urlType)
-        .then( (responseT)=> responseT.json() )
-        .then( (jsonTypesBody)=> jsonTypesBody.pokemon)
-        .then( (totalPokemon)=> totalPokemon.map(pokeApi.getIDPokemon))
-        .then( (listaID)=> Promise.all(listaID) )
-        .then( (numberPokemon)=> numberPokemon.filter(pokeApi.filtraPokemon))
-        .then( (listaFiltrada)=> Promise.all(listaFiltrada))
-        .then( (filtredPokemon)=> filtredPokemon.map(pokeApi.getDetailTyped))
-        .then( (detailTypesRequisicoes)=> Promise.all(detailTypesRequisicoes) )
-        .then( (detailsTypesPokemons)=> detailsTypesPokemons)
-
-}

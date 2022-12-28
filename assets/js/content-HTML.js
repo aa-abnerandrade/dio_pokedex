@@ -1,4 +1,20 @@
+function convertPokemonToLi(objPokemon) {
+    console.log('Convertendo para LI ' + objPokemon)
+    return `
+        <li id="${objPokemon.number}" class="pokemon ${objPokemon.type}" onclick="clickOnPokemon(this.id)" >
+            <span class="number">#${objPokemon.number}</span>
+            <span class="name">${objPokemon.name}</span>
 
+            <div class="detail">
+                <ol class="types">
+                    ${objPokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
+                </ol>
+
+                <img src="${objPokemon.photo}" alt="${objPokemon.name}">
+            </div>
+        </li>
+    `
+}
 
 function convertPokemonToCardHTML(objPokemonSelect) {
     console.log(objPokemonSelect)
@@ -14,11 +30,6 @@ function convertPokemonToCardHTML(objPokemonSelect) {
                             <tr id="row-namenumber"><td  id="cel-name">${objPokemonSelect.name}</td><td id="cel-num">#${objPokemonSelect.number}</td></tr>
                         </thead>
                         <tbody>
-                            <tr id="row_overview" class="row-group">
-                                <td colspan="2">
-                                    nome científico
-                                </td>
-                            </tr>
                             <tr id="row_types" class="row-group">
                                 <td id="col-types" colspan="2">
                                     <ol class="lista-NoListed">
@@ -26,9 +37,26 @@ function convertPokemonToCardHTML(objPokemonSelect) {
                                     </ol>
                                 </td>
                             </tr>
-                            <tr id="row_entries" class="row-group">
+                            <tr id="row_physical" class="row-group">
                                 <td colspan="2">
-                                    Bulbassauro é um Pokemon que tem um casco de planta e solta grama
+                    
+                                    <table class="subtabelas">
+                                        <thead>
+                                            <tr><td colspan="4" class="cel-title">Physical</td></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cel-physical-title">Height</td>
+                                                <td class="cel-physical-title">Weight</td>
+                                            </tr>   
+                                            <tr>
+                                                <td>${objPokemonSelect.height}cm</td>
+                                                <td>${objPokemonSelect.weight}kg</td>
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                    
                                 </td>
                             </tr>
                             <tr id="row_stats" class="row-group">

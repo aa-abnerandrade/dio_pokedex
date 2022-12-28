@@ -38,29 +38,9 @@ divTypes.childNodes.forEach(typeRadio => {
                     const newHtml = allPokemons.map(convertPokemonToLi).join('')
                     listaPokemon.innerHTML = newHtml
             })
-            // pokeApi.getPokemonByType(selectedType)
-            //     .then( (responseFiltred)=> {
-            //         const newHtml = responseFiltred.map(convertTypedToLi).join('')
-            //         listaPokemon.innerHTML += newHtml
-            // })
+            hideLoadMore();
         }
     })
 })
 
 
-function searchPokemon() {
-    let objInputSearch = document.getElementById('discovery__plus__search__form__input').value; 
-    console.log(objInputSearch);
-    
-    pokeApi.getPokemonByNameOrNumber(objInputSearch).then( (onePokemon = [])=> {
-        const newHTML = convertPokemonToLi(onePokemon)
-        listaPokemon.innerHTML = newHTML
-    })
-}
-
-
-bttSearch.addEventListener('click', function(e) {
-    e.preventDefault();
-    console.log('botão pesquisar')
-    searchPokemon();
-})
