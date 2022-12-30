@@ -1,3 +1,6 @@
+const backgroundAreas = document.querySelectorAll('.claroescuro')
+let ativadoDark = false
+
 const listaPokemon = document.getElementById('listaPokemon')
 const bttMore = document.getElementById('bttMore')
 const divPaginacaoMore = document.getElementById('paginacaoMore')
@@ -6,6 +9,23 @@ const bttAll = document.getElementById('bttAll')
 const maxRecords = 386;
 let offset = 0;
 let limit = 10;
+
+function alterarModoEscuroClaro() {
+
+    if (!ativadoDark) {
+        console.log('ativar modo escuro');
+        backgroundAreas.forEach( (area)=> {
+            area.style.backgroundColor = '#1E1E1E';
+        })  
+        ativadoDark = true    
+    } else if (ativadoDark) {
+        console.log('desativar modo escuro')
+        backgroundAreas.forEach( (area)=> {
+            area.style.backgroundColor = '#FAFAFA';
+        })
+        ativadoDark = false
+    }
+}
 
 function hideLoadMore() {
     divPaginacaoMore.removeChild(bttMore)

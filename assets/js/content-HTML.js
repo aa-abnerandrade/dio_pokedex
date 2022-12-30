@@ -46,8 +46,8 @@ function convertPokemonToCardHTML(objPokemonSelect) {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td class="cel-physical-title">Height</td>
-                                                <td class="cel-physical-title">Weight</td>
+                                                <td class="cel-physical-title"><i class="uil uil-ruler"></i></td>
+                                                <td class="cel-physical-title"><i class="uil uil-compass"></i></td>
                                             </tr>   
                                             <tr>
                                                 <td>${objPokemonSelect.height}cm</td>

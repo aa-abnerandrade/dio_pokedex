@@ -28,16 +28,26 @@
     <link rel="stylesheet" href="/assets/css/global--header.css">
     <link rel="stylesheet" href="/assets/css/global--discovery.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
-    <link rel="stylesheet" href="/assets/css/popup-pokemon.css">
+    <link rel="stylesheet" href="/assets/css/popup--pokemon.css">
     <link rel="stylesheet" href="/assets/css/global--footer.css">
+    <link rel="stylesheet" href="/assets/css/global-responsive.css">
+    <link rel="stylesheet" href="/assets/css/global--header-responsive.css">
+    <link rel="stylesheet" href="/assets/css/pokedex-responsive.css">
+    <link rel="stylesheet" href="assets/css/popup--pokemon-responsive.css">
+    <link rel="stylesheet" href="/assets/css/global--footer-responsive.css">
     <!-- Animações -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
 </head>
 
-<body>
+<body class="claroescuro">
     <header>
         <h1 class=cabecalho__titulo><a href="index.html"><img class="cabecalho__titulo__logo" src="medias/logo_pokedex.png" alt="Pokédex"></a></h1>
+        <div id="modoEscuroClaro">
+            <button id="header__EscuroClaro__icon" onclick="alterarModoEscuroClaro()">
+                <i class="uil uil-brightness-half"></i>
+            </button>
+        </div>
     </header>
     
     <nav class="discovery">
@@ -85,7 +95,7 @@
 
     </nav>
 
-    <section class="content">
+    <section class="content claroescuro">
 
 
         <ol id="listaPokemon" class="pokemons">
@@ -299,7 +309,7 @@
         </div>
         <div class="paginacao" id="paginacaoAll">
             <button id="bttAll" type="button">
-                All Types
+                All
             </button>
         </div>
 

@@ -1,5 +1,7 @@
 #div-popup {
     z-index: 1;
+    border-radius: 1rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 
@@ -48,7 +50,6 @@
         text-align: center;
         width: 100%;
         height: auto;
-        /*border: 5px solid #000000;*/
         border-radius: 1rem;
     }
 
@@ -76,13 +77,13 @@
         #cel-name {
             text-align: left;
             font-weight: 400;
-            font-size: 1.5rem;
+            font-size: 1.5em;
             text-transform: capitalize;
             padding: 0.5rem 0.5rem
         }
 
         #cel-num {
-            font-size: 1.25rem;
+            font-size: 1.25em;
             padding: 0.5rem 0.5rem;
             text-align: right;
         }
@@ -146,15 +147,15 @@
 
     #cel-desc {
         text-align: left;
-        font-size: 1rem;
+        font-size: 1em;
         font-style: italic;
         padding: 0 0.5rem
     }
 
     .cel-title {
         border-radius: 1rem 1rem 0 0;
-        font-size: 1.25rem;
-        line-height: 1.25rem;
+        font-size: 1.25em;
+        line-height: 1.25em;
     }
 
     #body-stats {
@@ -182,7 +183,7 @@
         color: #FFF; 
         background-color: transparent;
         border: none;
-        font-size: 3rem;
+        font-size: 3em;
         width: 30%;
     }
 
@@ -193,8 +194,8 @@
         border: none;
         justify-content: center;
         margin: 0.25rem auto;
-        width: 4rem;
-        height: 4rem;
+        width: 2em;
+        height: 2em;
         border-radius: 50%;
     }
 

@@ -1,0 +1,24 @@
+@media screen and (min-width: 992px) {
+    .pokemon .number {
+        font-size: 0.8em;
+    }
+    
+    .pokemon .name {
+        font-size: 1.25em;
+    }
+    
+    .pokemon .detail .types .type {
+        font-size: 0.725rem;
+    }
+
+    
+    .paginacao button {
+        padding: .5em .5em;
+        margin: .25rem 0;
+        font-size: 1em;
+        border: 2px solid #4052D9;
+    }
+    
+    
+}
+

@@ -15,7 +15,8 @@ function convertDetPokemonToClassPokemon(detPokemonAPI) {
     pokemon.type = type
 
     pokemon.height = detPokemonAPI.height*10
-    pokemon.weight = detPokemonAPI.weight*0.100
+    const tWeight = detPokemonAPI.weight*0.100
+    pokemon.weight = tWeight.toFixed(2)
 
     pokemon.photo = detPokemonAPI.sprites.other.dream_world.front_default
     pokemon.gif = detPokemonAPI.sprites.versions["generation-v"]["black-white"].animated.front_default
