@@ -13,13 +13,12 @@ let limit = 10;
 function alterarModoEscuroClaro() {
 
     if (!ativadoDark) {
-        console.log('ativar modo escuro');
         backgroundAreas.forEach( (area)=> {
             area.style.backgroundColor = '#1E1E1E';
         })  
         ativadoDark = true    
     } else if (ativadoDark) {
-        console.log('desativar modo escuro')
+        
         backgroundAreas.forEach( (area)=> {
             area.style.backgroundColor = '#FAFAFA';
         })
