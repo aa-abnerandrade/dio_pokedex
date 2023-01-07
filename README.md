@@ -1,4 +1,4 @@
-# Pokedex  
+# Pokédex  
 **Desenvolvimento de Pokedex consumindo uma API REST. Disponível para utilização em telas grandes e pequenas. Um desafio proposto durante o Bootcamp Cloud Full Stack, promovido pela DIO, em parceria com a Warburg Pincus**
 
 
@@ -18,7 +18,27 @@ Uso da API RESTful [PokeAPI](https://pokeapi.co/), que fornece objetos detalhado
 
 
 
+
+## Habilidades Praticadas
+- Consumo de API RESTful
+
+- Manipulação de Promise
+- Métodos Map e Filter
+- Como lidar com várias solicitações simultâneas
+- Conversão do modelo PokeApi para o meu modelo
+- Adição de HTML dinamicamente
+- Paginação
+
+
+
+## Screenshot
+
+![](C:\Users\abner\OneDrive\Documentos\formacoes_dev\bt-js_developer\2-web_js\dio_pokedex\medias\demo-gif.gif)
+
+
+
 ## Autoria  
+
 Abner Andrade
 Graduando em Análise e Desenvolvimento de Sistemas, apaixonado por desenvolvimento e eterno aprendiz. 
 
