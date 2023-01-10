@@ -21,12 +21,13 @@ Uso da API RESTful [PokeAPI](https://pokeapi.co/), que fornece objetos detalhado
 
 ## Habilidades Praticadas
 - Consumo de API RESTful
-
 - Manipulação de Promise
 - Métodos Map e Filter
 - Como lidar com várias solicitações simultâneas
 - Conversão do modelo PokeApi para o meu modelo
 - Adição dinâmica de HTML
+- Tratamento de erros
+- Usabilidade
 - Paginação
 
 
