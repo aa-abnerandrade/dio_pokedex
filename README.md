@@ -12,7 +12,7 @@
 
 ## API
 
-<img src="https://user-images.githubusercontent.com/24237865/83422649-d1b1d980-a464-11ea-8c91-a24fdf89cd6b.png" align="center" width="40%" style="zoom: 200%;" />  
+<img src="https://user-images.githubusercontent.com/24237865/83422649-d1b1d980-a464-11ea-8c91-a24fdf89cd6b.png" width="40%" style="zoom: 200%; justify-content:center;" />  
 
 Uso da API RESTful [PokeAPI](https://pokeapi.co/), que fornece objetos detalhados construídos a partir de milhares de linhas de dados relacionados aos Pokémon.
 
@@ -34,7 +34,7 @@ Uso da API RESTful [PokeAPI](https://pokeapi.co/), que fornece objetos detalhado
 
 ## Screenshot
 
-<img src="medias\to_readme\demo-gif.gif" style="align: center"/>
+<img src="medias\to_readme\demo-gif.gif" style="align:center;"/>
 
 
 ## Autoria  
