@@ -27,7 +27,7 @@ Uso da API RESTful [PokeAPI](https://pokeapi.co/), que fornece objetos detalhado
 - Conversão do modelo PokeApi para o meu modelo
 - Adição dinâmica de HTML
 - Tratamento de erros
-- Usabilidade
+- Usabilidade e Responsividade
 - Paginação
 
 
