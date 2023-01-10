@@ -34,8 +34,7 @@ Uso da API RESTful [PokeAPI](https://pokeapi.co/), que fornece objetos detalhado
 
 ## Screenshot
 
-![](medias\to_readme\demo-gif.gif)
-
+<img src="medias\to_readme\demo-gif.gif"
 
 
 ## Autoria  
