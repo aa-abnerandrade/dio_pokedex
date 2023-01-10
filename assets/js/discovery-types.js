@@ -1,7 +1,5 @@
 pokeApi.getPokemonByType = (oneType)=> {
-    console.log('o tipo é' + oneType)
     const urlType = `https://pokeapi.co/api/v2/type/${oneType}`;
-    console.log(urlType);
 
     return fetch(urlType)
         .then( (responseT)=> responseT.json() )

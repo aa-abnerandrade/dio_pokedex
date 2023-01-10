@@ -1,8 +1,6 @@
 
 const bttOption = document.getElementById('discovery__option__icon');
 const divPlus = document.getElementById('discovery__plus');
-console.log(bttOption);
-console.log(divPlus);
 let showPlus = false;
 
 
@@ -31,8 +29,6 @@ divTypes.childNodes.forEach(typeRadio => {
         const selectedType = e.target.innerHTML;
 
         if (selectedType) {
-            console.log('tipo selecionado ' + selectedType);
-
             pokeApi.getPokemonByType(selectedType)
             .then( (allPokemons = [])=> {
                     const newHtml = allPokemons.map(convertPokemonToLi).join('')

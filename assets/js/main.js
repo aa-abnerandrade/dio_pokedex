@@ -1,4 +1,4 @@
-const backgroundAreas = document.querySelectorAll('.claroescuro')
+const backgroundAreas = document.querySelectorAll('.lightdark')
 let ativadoDark = false
 
 const listaPokemon = document.getElementById('listaPokemon')
@@ -14,13 +14,12 @@ function alterarModoEscuroClaro() {
 
     if (!ativadoDark) {
         backgroundAreas.forEach( (area)=> {
-            area.style.backgroundColor = '#1E1E1E';
+            area.classList.replace("bglight", "bgdark");  
         })  
         ativadoDark = true    
     } else if (ativadoDark) {
-        
         backgroundAreas.forEach( (area)=> {
-            area.style.backgroundColor = '#FAFAFA';
+            area.classList.replace("bgdark", "bglight");
         })
         ativadoDark = false
     }

@@ -31,8 +31,7 @@ function convertDetPokemonToClassPokemon(detPokemonAPI) {
     const abilities = detPokemonAPI.abilities.map( (abilitySlot)=> abilitySlot.ability.name)
     const [ability] = abilities
     pokemon.abilities = abilities
-    pokemon.ability = ability
-    console.log('Instância criada')    
+    pokemon.ability = ability  
     
     return pokemon
 }
@@ -40,10 +39,7 @@ function convertDetPokemonToClassPokemon(detPokemonAPI) {
 
 
 pokeApi.getIDPokemon = function(draftPokemon) {
-    console.log(draftPokemon);
-    console.log(draftPokemon.pokemon.url); 
     let urlDraftPokemon = draftPokemon.pokemon.url;
-    console.log(urlDraftPokemon)
 
     return fetch(urlDraftPokemon)
         .then( (response)=> response.json())
@@ -54,7 +50,6 @@ pokeApi.getIDPokemon = function(draftPokemon) {
 
 
 pokeApi.getDetailPokemon = (pokemon)=> {
-    console.log(pokemon.url)
     return fetch(pokemon.url)
         .then( (response)=> response.json() )
         .then( convertDetPokemonToClassPokemon )
@@ -75,13 +70,11 @@ pokeApi.getPokemons = (offset = 0, limit = 10)=> {
 
 
 pokeApi.filtraPokemon = (idPokemon)=> {
-    console.log("ID Recebido" + idPokemon)
     return idPokemon <= 386;
 }
 
 
 pokeApi.getDetailTyped = (idFiltred)=> {
-    console.log('ID Filtrado' + idFiltred)
     const urlPokemon = `https://pokeapi.co/api/v2/pokemon/${idFiltred}`
 
     return fetch(urlPokemon)

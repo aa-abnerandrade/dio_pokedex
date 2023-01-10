@@ -10,7 +10,6 @@ cardAPI.getPokemonSelect = function(urlSelecionada) {
             return response.json()
         })
         .then(  (responseJson)=> {
-            console.log(responseJson)
             return responseJson
         })
         .then( (jResponse)=> {
@@ -31,10 +30,8 @@ cardAPI.getPokemonSelect = function(urlSelecionada) {
 
 
 function clickOnPokemon(idSelecionado) {
-
     const numPokemon = idSelecionado;
     const urlPokemon = `https://pokeapi.co/api/v2/pokemon/${numPokemon}`
-    //console.log('URL DENTRO' + urlPokemon)
 
     cardAPI.getPokemonSelect(urlPokemon)
     .then(  (instanciaPokemon)=> {
@@ -42,29 +39,22 @@ function clickOnPokemon(idSelecionado) {
         cardPokemon.innerHTML = convertPokemonToCardHTML(instanciaPokemon)
         cardPokemon.classList.replace('ocultaPUP', 'exibePUP')
         currentIDPokemonCard = instanciaPokemon.number
-        console.log(currentIDPokemonCard)
-        //console.log(convertPokemonToCardHTML(responseInfos))
     })
     
 }
 
 function previousPokemonPopup() {
     let idPreviousPokemon = currentIDPokemonCard - 1
-    console.log(idPreviousPokemon)
     clickOnPokemon(idPreviousPokemon)
 }
 
 function closePopup() {
-    console.log('fechar')
     const elementPopup = document.getElementById('div-popup')
-    elementPopup.classList.replace('exibePUP', 'ocultaPUP')
-    // elementPopup.classList.remove('exibePUP')
-    // elementPopup.classList.add('ocultaPUP')
+    elementPopup.classList.replace('exibePUP', 'ocultaPUP')   
 }
 
 function nextPokemonPopup() {
     let idNextPokemon = currentIDPokemonCard + 1
-    console.log(idNextPokemon)
     clickOnPokemon(idNextPokemon)
 }
 

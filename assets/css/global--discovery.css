@@ -37,8 +37,7 @@
     
 .discovery__plus__container {
     width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;  
+    text-align: center;  
 }
 
 #discovery__plus {
@@ -90,6 +89,18 @@
     cursor: pointer;
 }
 
+.ocultaSPN {
+    
+}
+
+.exibeSPN {
+    width: 95%;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 0.8em;
+    text-align: left;
+    color: #ff261b;
+}
 
 #discovery__plus__types {
     display: flex;
@@ -105,7 +116,7 @@
     width: 7rem;
     box-shadow: 
         inset  0px -7px 6px -8px #444, 
-        0px 6px 10px -5px #4052D9;
+        0px 6px 5px -5px #4052D9;
     border: none;
     color: #FFF;
     font-size: 0.9rem;

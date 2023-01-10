@@ -1,5 +1,4 @@
 function convertPokemonToLi(objPokemon) {
-    console.log('Convertendo para LI ' + objPokemon)
     return `
         <li id="${objPokemon.number}" class="pokemon ${objPokemon.type}" onclick="clickOnPokemon(this.id)" >
             <span class="number">#${objPokemon.number}</span>
@@ -17,7 +16,6 @@ function convertPokemonToLi(objPokemon) {
 }
 
 function convertPokemonToCardHTML(objPokemonSelect) {
-    console.log(objPokemonSelect)
     return ` 
         <div id="popupPokemon" class="${objPokemonSelect.type}">
 
@@ -110,6 +108,21 @@ function convertPokemonToCardHTML(objPokemonSelect) {
                 </div>
             </div>
         </div>    
-        `
+    `
 }
 
+
+function convertErroToSpan(msgErro) {
+    switch (msgErro) {
+        case "Limited":
+            return `
+                <span>Por enquanto, só temos os Pokémon das gerações I, II e III. Estamos trabalhando para aumentar nosso catálogo.</span>
+            `
+            break;
+        default:
+            return `
+                <span>Este termo parece estar incorreto. Por favor, verifique e tente novamente.</span>
+            `
+            break;
+    }
+}
